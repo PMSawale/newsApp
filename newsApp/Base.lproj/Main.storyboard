@@ -1,24 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qkZ-Na-3f9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
+        <array key="RobotoSlab-ExtraBold.ttf">
+            <string>RobotoSlab-ExtraBold</string>
+        </array>
+        <array key="RobotoSlab-ExtraLight.ttf">
+            <string>RobotoSlab-ExtraLight</string>
+        </array>
+        <array key="RobotoSlab-Medium.ttf">
+            <string>RobotoSlab-Medium</string>
+        </array>
+        <array key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tcl-bk-6Jg">
+                                <rect key="frame" x="20" y="209" width="353" height="164.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPN-lg-NEn">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="iRB-Qt-MdN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEf-y4-dJx">
+                                        <rect key="frame" x="0.0" y="65" width="353" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="YnG-Jm-htV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcj-Iu-ySS">
+                                        <rect key="frame" x="0.0" y="130" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfK-Ox-YSe">
+                                <rect key="frame" x="0.0" y="59" width="393" height="53"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-ExtraBold" family="Roboto Slab" pointSize="40"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-a3-BmS">
+                                <rect key="frame" x="67" y="383.33333333333331" width="321" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Don't have an Acount?. please Register"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yfK-Ox-YSe" secondAttribute="trailing" id="CSs-CW-aIM"/>
+                            <constraint firstItem="tcl-bk-6Jg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NjF-1E-eV5"/>
+                            <constraint firstItem="yfK-Ox-YSe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OzW-FD-LzX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lz7-a3-BmS" secondAttribute="trailing" constant="5" id="b1q-rA-fan"/>
+                            <constraint firstItem="tcl-bk-6Jg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="fl9-Io-kNV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tcl-bk-6Jg" secondAttribute="trailing" constant="20" id="h0E-oq-Tzq"/>
+                            <constraint firstItem="yfK-Ox-YSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hS8-v7-uF8"/>
+                            <constraint firstItem="Lz7-a3-BmS" firstAttribute="top" secondItem="tcl-bk-6Jg" secondAttribute="bottom" constant="10" id="u2Z-bh-FSv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JWE-tD-Z7B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1863.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Heads LinesVC-->
+        <scene sceneID="vCt-NN-AvJ">
+            <objects>
+                <viewController storyboardIdentifier="HeadsLines" id="KVJ-hg-3gx" customClass="HeadsLinesVC" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KbC-1J-C9B">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="73I-La-yap">
+                                <rect key="frame" x="0.0" y="129" width="393" height="723"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeadLinesCell" id="LAy-Yx-U6r" customClass="HeadLinesTableViewCell" customModule="newsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LAy-Yx-U6r" id="ywU-5f-r0C">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xAP-HO-JVC">
+                                                    <rect key="frame" x="20" y="11" width="353" height="228"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRo-gJ-GeQ" userLabel="Title">
+                                                    <rect key="frame" x="36" y="160.33333333333334" width="321" height="26.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                                    <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSA-0e-xV8" userLabel="Name">
+                                                    <rect key="frame" x="36" y="211" width="31" height="16"/>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="12"/>
+                                                    <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uN-Id-SUs" userLabel="Date">
+                                                    <rect key="frame" x="69" y="208.33333333333334" width="35" height="18.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-ExtraLight" family="Roboto Slab" pointSize="14"/>
+                                                    <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="mRo-gJ-GeQ" firstAttribute="leading" secondItem="ywU-5f-r0C" secondAttribute="leadingMargin" constant="16" id="08Q-4y-azN"/>
+                                                <constraint firstItem="xAP-HO-JVC" firstAttribute="leading" secondItem="ywU-5f-r0C" secondAttribute="leadingMargin" id="1FX-Fw-HT4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xAP-HO-JVC" secondAttribute="trailing" id="3pv-n1-mYs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mRo-gJ-GeQ" secondAttribute="trailing" constant="16" id="5l1-2U-vxz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BSA-0e-xV8" secondAttribute="bottom" constant="12" id="6Hm-nR-tGT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xAP-HO-JVC" secondAttribute="bottom" id="FP5-vj-ER7"/>
+                                                <constraint firstItem="4uN-Id-SUs" firstAttribute="leading" secondItem="BSA-0e-xV8" secondAttribute="trailing" constant="2" id="SEC-im-19I"/>
+                                                <constraint firstItem="BSA-0e-xV8" firstAttribute="leading" secondItem="ywU-5f-r0C" secondAttribute="leadingMargin" constant="16" id="Tp7-G8-IgN"/>
+                                                <constraint firstItem="xAP-HO-JVC" firstAttribute="top" secondItem="ywU-5f-r0C" secondAttribute="topMargin" id="hPG-a7-W4F"/>
+                                                <constraint firstItem="BSA-0e-xV8" firstAttribute="top" secondItem="mRo-gJ-GeQ" secondAttribute="bottom" constant="24" id="lGq-15-IJJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4uN-Id-SUs" secondAttribute="bottom" constant="12" id="qUp-xE-dsC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="dateLbl" destination="4uN-Id-SUs" id="usk-4y-9o2"/>
+                                            <outlet property="nameLbl" destination="BSA-0e-xV8" id="eSu-V5-W01"/>
+                                            <outlet property="newsImg" destination="xAP-HO-JVC" id="UBr-zC-p8L"/>
+                                            <outlet property="titleLbl" destination="mRo-gJ-GeQ" id="MiO-fL-BJ1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KVJ-hg-3gx" id="Yfi-z9-pcL"/>
+                                    <outlet property="delegate" destination="KVJ-hg-3gx" id="76b-eo-ebV"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADLINES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M0-KJ-7X1">
+                                <rect key="frame" x="16" y="59" width="361" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6Ia-Fr-x2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qKO-Oi-jlz"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1M0-KJ-7X1" secondAttribute="trailing" id="6lk-cR-gFR"/>
+                            <constraint firstItem="1M0-KJ-7X1" firstAttribute="top" secondItem="KbC-1J-C9B" secondAttribute="topMargin" id="QRV-mF-5X2"/>
+                            <constraint firstAttribute="bottom" secondItem="73I-La-yap" secondAttribute="bottom" id="VDc-6l-ybj"/>
+                            <constraint firstItem="73I-La-yap" firstAttribute="top" secondItem="1M0-KJ-7X1" secondAttribute="bottom" id="gAB-rl-VY7"/>
+                            <constraint firstItem="1M0-KJ-7X1" firstAttribute="leading" secondItem="KbC-1J-C9B" secondAttribute="leadingMargin" id="rAR-mE-zap"/>
+                            <constraint firstItem="73I-La-yap" firstAttribute="leading" secondItem="qKO-Oi-jlz" secondAttribute="leading" id="sl8-JN-MO3"/>
+                            <constraint firstItem="73I-La-yap" firstAttribute="trailing" secondItem="qKO-Oi-jlz" secondAttribute="trailing" id="wTk-XA-OlC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DUq-f4-Xu5"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="73I-La-yap" id="rQF-A3-DTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k86-TB-cCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5510.6870229007627" y="-230.28169014084509"/>
+        </scene>
+        <!--DescriptionVC-->
+        <scene sceneID="5K8-UV-ah8">
+            <objects>
+                <viewController storyboardIdentifier="description" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z22-fS-Ans" customClass="DescriptionVC" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57e-GH-D3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JhS-y2-CWs">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgX-nx-obe">
+                                <rect key="frame" x="30" y="666.66666666666663" width="333" height="26.666666666666629"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-9m-dpx">
+                                <rect key="frame" x="20" y="763.33333333333337" width="31" height="16"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-hP-wHr">
+                                <rect key="frame" x="353" y="763.33333333333337" width="30" height="16"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-ExtraLight" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-HU-uGg">
+                                <rect key="frame" x="10" y="799.33333333333337" width="393" height="18.666666666666629"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="14"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-M4-ANm">
+                                <rect key="frame" x="20" y="59" width="50" height="35"/>
+                                <color key="tintColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="arrow.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backAction:" destination="z22-fS-Ans" eventType="touchUpInside" id="4S9-JP-4xR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dlt-Q2-spt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AKF-HU-uGg" firstAttribute="top" secondItem="x4e-hP-wHr" secondAttribute="bottom" constant="20" id="0eU-OG-EOX"/>
+                            <constraint firstItem="JhS-y2-CWs" firstAttribute="top" secondItem="57e-GH-D3Z" secondAttribute="top" id="9Ni-oW-bpT"/>
+                            <constraint firstItem="AKF-HU-uGg" firstAttribute="trailing" secondItem="Dlt-Q2-spt" secondAttribute="trailing" constant="10" id="Bd0-Sl-DSZ"/>
+                            <constraint firstItem="VeD-9m-dpx" firstAttribute="top" secondItem="kgX-nx-obe" secondAttribute="bottom" constant="70" id="EF9-2I-Rz8"/>
+                            <constraint firstItem="AKF-HU-uGg" firstAttribute="bottom" secondItem="Dlt-Q2-spt" secondAttribute="bottom" id="Ey4-Ch-aNR"/>
+                            <constraint firstItem="kgX-nx-obe" firstAttribute="leading" secondItem="Dlt-Q2-spt" secondAttribute="leading" constant="30" id="FbU-qG-fQ9"/>
+                            <constraint firstItem="AKF-HU-uGg" firstAttribute="top" secondItem="VeD-9m-dpx" secondAttribute="bottom" constant="20" id="LI7-3L-NBp"/>
+                            <constraint firstItem="AKF-HU-uGg" firstAttribute="leading" secondItem="Dlt-Q2-spt" secondAttribute="leading" constant="10" id="R7V-KV-xvq"/>
+                            <constraint firstItem="VeD-9m-dpx" firstAttribute="leading" secondItem="Dlt-Q2-spt" secondAttribute="leading" constant="20" id="SAL-CB-XfR"/>
+                            <constraint firstItem="JhS-y2-CWs" firstAttribute="trailing" secondItem="Dlt-Q2-spt" secondAttribute="trailing" id="Try-hm-7QW"/>
+                            <constraint firstAttribute="bottom" secondItem="JhS-y2-CWs" secondAttribute="bottom" id="Un1-7P-blM"/>
+                            <constraint firstItem="JhS-y2-CWs" firstAttribute="leading" secondItem="Dlt-Q2-spt" secondAttribute="leading" id="fTg-mb-DlM"/>
+                            <constraint firstItem="Dlt-Q2-spt" firstAttribute="trailing" secondItem="kgX-nx-obe" secondAttribute="trailing" constant="30" id="fsR-XF-Wp9"/>
+                            <constraint firstItem="Dlt-Q2-spt" firstAttribute="trailing" secondItem="x4e-hP-wHr" secondAttribute="trailing" constant="10" id="g0U-gp-cWh"/>
+                            <constraint firstItem="Bcg-M4-ANm" firstAttribute="top" secondItem="Dlt-Q2-spt" secondAttribute="top" id="mTJ-rw-Cpt"/>
+                            <constraint firstItem="Bcg-M4-ANm" firstAttribute="leading" secondItem="Dlt-Q2-spt" secondAttribute="leading" constant="20" id="xo2-Dk-bex"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Image" destination="JhS-y2-CWs" id="K6w-Il-keb"/>
+                        <outlet property="dateLbl" destination="x4e-hP-wHr" id="Aah-aH-Dt7"/>
+                        <outlet property="descriptionLbl" destination="AKF-HU-uGg" id="WVZ-QZ-bkt"/>
+                        <outlet property="nameLbl" destination="VeD-9m-dpx" id="J8Y-o3-N78"/>
+                        <outlet property="titleLbl" destination="kgX-nx-obe" id="eBb-sg-juG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4i9-jm-gJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6234.3511450381675" y="-213.38028169014086"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="npv-63-ly1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qkZ-Na-3f9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BNh-Q4-RsQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KVJ-hg-3gx" kind="relationship" relationship="rootViewController" id="GkX-Kb-jNn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5h-iC-64S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4583.9694656488546" y="-230.28169014084509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
