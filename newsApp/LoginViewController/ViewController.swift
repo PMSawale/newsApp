@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         UIConfig()
     }
     func UIConfig(){
+        errorLbl.isHidden = true
         loginOut.layer.cornerRadius = 10
         gLoginOut.layer.cornerRadius = 10
         aLoginOut.layer.cornerRadius = 10
@@ -32,16 +33,24 @@ class ViewController: UIViewController {
         //
         let email = emailID.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let pass = pasword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        Auth.auth().signIn(withEmail: email, password: pass) {
-            (result, error) in
-            // Error while SiginingIn
-            if error != nil {
-                self.errorLbl.text = error!.localizedDescription
-                self.errorLbl.alpha = 1
-            } else {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "HeadsLines") as? HeadsLinesVC
-                vc?.modalPresentationStyle = .fullScreen
-                self.present(vc!, animated: true)
+        if isValidEmail(email) == false {
+            errorLbl.isHidden = false
+            return errorLbl.text = "Please enterValidEmail"
+        } else {
+            Auth.auth().signIn(withEmail: email, password: pass) {
+                (result, error) in
+                // Error while LoginIN
+                if error != nil {
+                    self.errorLbl.isHidden = false
+                    self.errorLbl.text = error!.localizedDescription
+                    self.errorLbl.alpha = 1
+                } else {
+                    // Login Successful
+                    self.errorLbl.isHidden = true
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "HeadsLines") as? HeadsLinesVC
+                    vc?.modalPresentationStyle = .fullScreen
+                    self.present(vc!, animated: true)
+                }
             }
         }
     }

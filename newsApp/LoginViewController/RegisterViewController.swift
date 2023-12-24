@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorLbl.isHidden = true
         // Do any additional setup after loading the view.
     }
     func validateFields() -> String? {
@@ -28,13 +28,16 @@ class RegisterViewController: UIViewController {
             lastName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailID.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             pasword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
+            errorLbl.isHidden = false
             return "Please fill all the fields."
+        } else if isValidEmail(emailID.text!) == false {
+            errorLbl.isHidden = false
+            return "Please enter Valid Email ID"
         } else {
             let validPass  = pasword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             if isPasswordValid(validPass) == false {
-                
+                errorLbl.isHidden = false
                 return "Please make sure your password is at least 8 characters, atleast one special character (%$#*), atleast one number."
             }
             
@@ -63,6 +66,7 @@ class RegisterViewController: UIViewController {
                     self.showError("Error while creating User")
                 } else {
                     //User Created Successfully
+                    self.errorLbl.isHidden = false
                     let dataBase = Firestore.firestore()
                     
                     dataBase.collection("users").addDocument(data: ["firstname":firstName,
@@ -73,10 +77,6 @@ class RegisterViewController: UIViewController {
                         }
                     }
                     // Move Back to login
-//                    let vc = storyboard?.instantiateViewController(withIdentifier: "description") as? DescriptionVC
-//                    vc?.descriptions = articleData[indexPath.row]
-//                    vc?.modalPresentationStyle = .fullScreen
-//                    present(vc!, animated: true)
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "VC") as? ViewController
                     vc?.modalPresentationStyle = .fullScreen
                     self.present(vc!, animated: true)
